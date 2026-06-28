@@ -1,0 +1,7 @@
+Project: 4
+Given a string of n words, help Alex to find out how many times his name appears in the string.
+
+Solution:
+
+s = input()
+print(s.count("Alex"))
