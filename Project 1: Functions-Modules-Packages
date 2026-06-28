@@ -1,0 +1,15 @@
+Tech Module: Functions/Modules/Packages
+Project: 1
+
+Write a Python function that accepts a hyphen-separated sequence of colors as input and returns the colors in a hyphen-separated sequence after sorting them alphabetically.
+Constraint: All the colors will be completely in either lower case or upper case.
+
+Solution:
+
+def sort_colors(colors):
+    c = colors.split("-")
+    c.sort()
+    return "-".join(c)
+
+colors = input()
+print(sort_colors(colors))
