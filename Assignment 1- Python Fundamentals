@@ -1,0 +1,100 @@
+# Ques 1. Write a program to check if a given number is Positive, Negative, or Zero.
+Code:
+
+n = int(input())
+if n > 0:
+    print("Positive")
+elif n < 0:
+    print("Negative")
+else:
+    print("Zero")
+
+# Ques 2. Write a program to check if a given number is odd or even.
+Code:
+
+n = int(input())
+if n % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
+# Ques 3. Given two non-negative values, print true if they have the same last digit, such as with 27 and 57.
+Code:
+
+a = int(input())
+b = int(input())
+if a % 10 == b % 10:
+    print(True)
+else:
+    print(False)
+
+# Ques 4. Write a program to print numbers from 1 to 10 in a single row with one tab space.
+Code:
+
+for i in range(1, 11):
+    print(i, end="\t")
+
+# Ques 5. Write a program to print even numbers between 23 and 57. Each number should be printed in a separate row.
+Code:
+
+for i in range(23, 58):
+    if i % 2 == 0:
+        print(i)
+
+# Ques 6. Write a program to check if a given number is prime or not.
+Code:
+
+n = int(input())
+if n < 2:
+    print("Not Prime")
+else:
+    flag = True
+    for i in range(2, n):
+        if n % i == 0:
+            flag = False
+            break
+    if flag:
+        print("Prime")
+    else:
+        print("Not Prime")
+
+# Ques 7. Write a program to print prime numbers between 10 and 99.
+Code: 
+
+for n in range(10, 100):
+    prime = True
+    for i in range(2, n):
+        if n % i == 0:
+            prime = False
+            break
+    if prime:
+        print(n)
+
+# Ques 8. Write a program to print the sum of all the digits of a given number.
+Code:
+
+n = int(input())
+s = 0
+while n > 0:
+    s += n % 10
+    n //= 10
+print(s)
+
+# Ques 9. Write a program to reverse a given number and print.
+Code:
+
+n = input()
+print(n[::-1])
+
+# Ques 10. Write a program to find if the given number is palindrome or not.
+Code:
+
+n = int(input())
+rev = 0
+while n > 0:
+    rev = rev * 10 + n % 10
+    n //= 10
+print(rev)
+
+
+
