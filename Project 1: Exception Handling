@@ -1,0 +1,58 @@
+ech Module: Exception Handling
+Project: 1
+
+You had saved the items and their price details in a text file, which you purchased yesterday from a nearby supermarket.
+You need to know:
+How many items did you purchase?
+How many items are free?
+What is the total amount you had to pay?
+What is the discount amount?
+What is the final amount did you pay after the discount?
+
+Help yourself by writing a Python code to do this. Include necessary code to handle the possible exceptions.
+
+Note:
+Data is stored in a text file Purchase-1.txt
+Each line contains one item's details.
+Item name and price are separated by a space.
+You have to enter the file name during runtime.
+
+
+Solution:
+
+try:
+    filename = input("Enter the file name: ")
+
+    with open(filename, "r") as file:
+        lines = file.readlines()
+
+    items = 0
+    free = 0
+    amount = 0
+    discount = 0
+
+    for line in lines:
+        line = line.strip()
+        if line == "":
+            continue
+
+        item, price = line.split()
+
+        if item.lower() == "discount":
+            discount = int(price)
+        elif price.lower() == "free":
+            free += 1
+        else:
+            items += 1
+            amount += int(price)
+
+    print("No of items purchased:", items)
+    print("No of free items:", free)
+    print("Amount to pay:", amount)
+    print("Discount given:", discount)
+    print("Final amount paid:", amount - discount)
+
+except FileNotFoundError:
+    print("File not found")
+except Exception as e:
+    print("Error:", e)
