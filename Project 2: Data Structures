@@ -1,0 +1,9 @@
+Given the participant's score sheet for your University Sports Day, you are required to find the runner-up score.
+You have scores. Store them in a list and find the score of the runner-up.
+
+Solution:
+
+scores = [2, 3, 6, 6, 5]
+scores = list(set(scores))
+scores.sort()
+print(scores[-2])
