@@ -1,0 +1,27 @@
+Project: 2
+
+Create a Python module with the following functions:
+
+Solution:
+
+def ispalindrome(name):
+    if name == name[::-1]:
+        print("Yes it is a palindrome.")
+    else:
+        print("No it is not a palindrome.")
+
+def count_the_vowels(name):
+    count = 0
+    for i in name.lower():
+        if i in "aeiou":
+            count += 1
+    print("No of vowels:", count)
+
+def frequency_of_letters(name):
+    d = {}
+    for i in name:
+        d[i] = d.get(i, 0) + 1
+    print("Frequency of letters:", end=" ")
+    for k, v in d.items():
+        print(f"{k}-{v}", end=" ")
+
